@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="470"
+  height="330"
+  viewBox="-10 -10 470 330"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+
+  <path
+    d="M 75 30
+       L 405 30
+       Q 450 30, 450 75
+       Q 450 120, 405 120
+       L 45 120
+       Q 0 120, 0 165
+       Q 0 210, 45 210
+       L 405 210
+       Q 450 210, 450 255
+       Q 450 300, 405 300
+       L 75 300"
+    stroke="white"
+    fill="none"
+    stroke-width="4.5"
+    stroke-linecap="round"
+  />
+
+  <circle cx="75" cy="30" r="9" fill="white" />
+  <circle cx="450" cy="75" r="9" fill="white" />
+  <circle cx="0" cy="165" r="9" fill="white" />
+  <circle cx="450" cy="255" r="9" fill="white" />
+  <circle cx="75" cy="300" r="9" fill="white" />
+</svg>
