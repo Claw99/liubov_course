@@ -28,73 +28,87 @@ const plans = [
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="bg-background py-20">
-      <div className="">
+    <section id="pricing" className="bg-background py-20 px-5">
+      <div className="max-w-6xl mx-auto">
         {/* Заголовок секции */}
         <div className="text-center mb-16">
-          <h2 className="font-poiret text-accent-peony text-4xl uppercase tracking-[0.3em]">
+          <h2 className="font-advent text-accent-peony text-4xl uppercase tracking-[0.3em]">
             Тарифы
           </h2>
+          <div className="w-16 h-[1px] bg-primary/40 mx-auto mt-4"></div>
         </div>
 
         {/* Сетка тарифов */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-5 max-w-5xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto items-stretch">
           {plans.map((plan, key) => {
             const isPremium = plan.name === "Премиум";
 
             return (
               <div
                 key={key}
-                className={`rounded-xl p-8 flex flex-col h-full backdrop-blur-sm transition-all duration-500
+                className={`relative flex flex-col h-full rounded-2xl p-8 overflow-hidden transition-all duration-700
+            /* ПРИМЕНЯЕМ ЭФФЕКТ СТЕКЛА ВМЕСТО СТАРЫХ ЦВЕТОВ */
+            bg-white/5 backdrop-blur-[12px] border transition-all duration-500
+            shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]
             ${
               isPremium
-                ? "border-[1px] border-primary shadow-[0_0_30px_rgba(107,27,26,0.3)] bg-white/60 scale-105 z-10"
-                : "border border-primary/20 bg-white/40"
+                ? "border-primary/80  border-2 scale-105 z-10 shadow-[0_20px_50px_rgba(197,160,89,0.15)]"
+                : "border-white/30 border-2"
             }`}
               >
-                {/* Шапка тарифа */}
-                <div className="mb-10 text-center">
-                  <h3
-                    className={`font-poiret text-2xl uppercase drop-shadow-[0_1px_3px_rgba(197,160,89,0.5)] tracking-widest ${isPremium ? "text-accent-peony font-bold" : "text-foreground"}`}
-                  >
-                    {plan.name}
-                  </h3>
-                  <p className="font-fira text-sm text-foreground/60 mt-2 ">
-                    {plan.description}
-                  </p>
-                  <div className="mt-4 text-4xl font-light text-accent-peony font-fira">
-                    €{plan.price}
+                {/* ТОТ САМЫЙ БЛИК: теперь внутри карточек тарифов */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-100 pointer-events-none" />
+
+                {/* Содержимое (z-10 чтобы быть над бликом) */}
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Шапка тарифа */}
+                  <div className="mb-10 text-center">
+                    <h3
+                      className={`font-advent text-3xl uppercase tracking-[0.2em] drop-shadow-sm ${
+                        /* Если Премиум — золото, если Базовый — яркая слоновая кость */
+                        isPremium
+                          ? "text-primary font-bold"
+                          : "text-white font-medium opacity-100"
+                      }`}
+                    >
+                      {plan.name}
+                    </h3>
+                    <p className="font-fira text-sm text-gray-300 mt-3 leading-relaxed">
+                      {plan.description}
+                    </p>
+                    <div className="mt-6 text-5xl font-light text-primary font-advent">
+                      €{plan.price}
+                    </div>
                   </div>
+
+                  {/* Список возможностей */}
+                  <ul className="flex-grow space-y-6">
+                    {plan.features.map((feature, featureKey) => (
+                      <li
+                        key={featureKey}
+                        className="flex flex-col items-center gap-3 text-center"
+                      >
+                        <div className="w-8 h-[1px] bg-primary/30"></div>
+                        <span className="font-fira text-white/90 text-sm md:text-base leading-[1.6] tracking-wide">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Кнопка */}
+                  <button
+                    className={`mt-12 w-full py-5 rounded-sm font-advent uppercase tracking-[0.2em] text-sm transition-all  border border-primary text-primary hover:bg-primary/10 duration-500
+               `}
+                  >
+                    Выбрать программу
+                  </button>
                 </div>
 
-                {/* Список возможностей с дивайдерами */}
-                <ul className="flex-grow space-y-6">
-                  {plan.features.map((feature, featureKey) => (
-                    <li
-                      key={featureKey}
-                      className="flex flex-col items-center gap-2 text-center"
-                    >
-                      {/* Тонкая золотая полоска перед каждой фичей */}
-                      <div className="w-8 h-[1px] bg-primary/40 "></div>
-
-                      <span className="font-fira text-foreground/80 text-sm md:text-base leading-snug tracking-wide">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Кнопка */}
-                <button
-                  className={`mt-12 w-full py-4 rounded-lg border font-poiret uppercase tracking-widest transition-all
-              ${
-                isPremium
-                  ? "bg-accent-peony text-background border-accent-peony hover:bg-foreground"
-                  : "border-accent-peony text-accent-peony hover:bg-accent-peony hover:text-background"
-              }`}
-                >
-                  Выбрать
-                </button>
+                {/* Мягкое свечение внизу для Премиума */}
+                {isPremium && (
+                  <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
+                )}
               </div>
             );
           })}

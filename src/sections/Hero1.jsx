@@ -21,10 +21,10 @@ export const Hero1 = () => {
       {/* Контент */}
       <div className="relative z-10 h-full flex flex-col px-4 sm:px-6 md:px-8 max-w-4xl md:max-w-5xl justify-center items-center px-4 text-center">
         <h2
-          className="font-fira text-accent-peony
+          className="font-advent font-normal  text-accent-peony
     text-[clamp(2.2rem,9vw,7rem)]
     uppercase
-  tracking-[0.08em] md:tracking-[0.15em]
+  tracking-[0.1em] md:tracking-[0.15em]
     leading-tight
     drop-shadow
     max-w-5xl

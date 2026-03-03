@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "tailwindcss";
@@ -12,7 +15,8 @@
 } */
 @theme {
   /* Основной цвет слоновой кости (фон) */
-  --color-background: #f7f3e8;
+  /* --color-background: #f7f3e8; */
+  --color-background: #0d0d0c;
 
   /* Глубокий кофейно-коричневый для основного текста (чтобы было "дорого") */
   --color-foreground: #2d1b18;
@@ -36,6 +40,7 @@
   --color-primary-glow: rgba(197, 160, 89, 0.4);
   --font-vibes: "Great Vibes", cursive;
   --font-fira: "Fira Sans", sans-serif;
+  --font-advent: "Advent Pro", sans-serif;
 }
 .font-vibes {
   font-family: var(--font-vibes) !important;
@@ -43,6 +48,10 @@
 .font-fira {
   font-family: var(--font-fira) !important;
 }
+.font-advent {
+  font-family: var(--font-advent) !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -107,6 +116,32 @@
     );
     backdrop-filter: blur(16px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+  .glass-iphone {
+    position: relative;
+
+    /* Полупрозрачная стеклянная основа */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.15)
+    );
+
+    /* Настоящий blur + легкая насыщенность */
+    backdrop-filter: blur(24px) saturate(120%);
+    -webkit-backdrop-filter: blur(24px) saturate(120%);
+
+    /* Тонкая светлая рамка */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* Внутренний свет (объём стекла) */
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+
+    /* Скругление обязательно для эффекта */
+    border-radius: 24px;
   }
 
   .glass-strong {
