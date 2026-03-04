@@ -15,8 +15,8 @@
 } */
 @theme {
   /* Основной цвет слоновой кости (фон) */
-  /* --color-background: #f7f3e8; */
-  --color-background: #0d0d0c;
+  --color-background: #82734d;
+  /* --color-background: #0d0d0c; */
 
   /* Глубокий кофейно-коричневый для основного текста (чтобы было "дорого") */
   --color-foreground: #2d1b18;
@@ -35,6 +35,10 @@
 
   /* Цвет границ — теперь в тон золота, но мягче */
   --color-border: #d4a373;
+
+  /* Цвета заливки*/
+  --color-burgundy: #75162d;
+  --color-darkmoon: #560b18;
 
   /* Добавим цвет для свечения (Glow) в тон Ivory */
   --color-primary-glow: rgba(197, 160, 89, 0.4);
