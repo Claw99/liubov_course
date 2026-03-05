@@ -4,12 +4,13 @@ const plans = [
   {
     name: "Программа обучения",
     price: "111",
-    description: "Погружение в основы управления энергией",
+    description: "",
     features: [
-      "6 видеоуроков",
-      "3 бонусных материала",
+      "7 видеоуроков в записи",
+      "3 бонусных видеоматериала",
       "Доступ к груповой трансформационной сессии",
-      "Доступ к закрытому чату",
+      "Членство в закрытом чате участников",
+      "Доступ к материалам 3 месяца после старта курса ",
     ],
   },
 ];
@@ -45,7 +46,7 @@ export const Pricing = () => {
               <div className="relative z-10 flex flex-col items-center text-center">
                 {/* Название */}
                 <h4 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent text-2xl font-bold uppercase tracking-[0.2em] mb-2">
-                  {plan.name}
+                  Тариф <br></br> "Базовый"
                 </h4>
 
                 <p className="font-fira text-white/60 text-sm tracking-widest mb-8">
@@ -57,7 +58,10 @@ export const Pricing = () => {
                   <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]">
                     {plan.price}
                   </span>
-                  <span className="text-2xl mt-2 mr-1 text-[#c5a059]">€</span>
+
+                  <span className="text-2xl mt-6.5 mx-2 mr-1 text-[#c5a059]">
+                    евро
+                  </span>
                 </div>
 
                 {/* Список фич (стилизованный под твои точки) */}
@@ -101,7 +105,7 @@ export const Pricing = () => {
 
         {/* Подпись под тарифом */}
         <p className="text-center text-white/30 font-fira text-xs tracking-[0.2em] uppercase">
-          * Доступ к материалам открывается сразу после оплаты
+          * Старт в апреле, количество мест ограничено
         </p>
       </div>
     </section>

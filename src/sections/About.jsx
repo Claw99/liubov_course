@@ -51,7 +51,7 @@ export const About = () => {
         {/* Заголовок секции */}
         <div className="mb-2 text-center md:text-left">
           <h3 className=" bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-2xl uppercase tracking-[0.3em]">
-            ПРОЕКТ УПРАВЛЕНИЕ ЭНЕРГИЕЙ <br></br> это
+            ПРОЕКТ УПРАВЛЕНИЕ ЭНЕРГИЕЙ-это
           </h3>
           <div
             className="
@@ -75,7 +75,7 @@ export const About = () => {
             <div
               className={`
             relative
-            ${index === 2 ? "bg-darkmoon" : "bg-white/5"}
+            ${index === 3 ? "bg-darkmoon" : "bg-white/5"}
             backdrop-blur-[12px]
             border border-white/20
             rounded-2xl

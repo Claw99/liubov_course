@@ -3,14 +3,14 @@ export const Roadmap = () => {
     {
       id: 1,
       title: "Финансовый объем и способность выдерживать масштаб",
-      desc: "сколько денег ты можешь не просто заработать а удержать",
-      top: "20%", // Позиция по вертикали
+      desc: "",
+      top: "25%", // Позиция по вертикали
       left: "50%", // Центр, но можешь менять (например 45% или 55%)
     },
     {
       id: 2,
-      title: "Качество отношений с партнером семьей миром",
-      desc: "те сценарии которые ты бессознательно повторяешь",
+      title: `Качество отношений с партнером  семьей миром`,
+      desc: "те  сценарии которые  ты бессознаательно повторяешь",
       top: "38%",
       left: "40%",
     },
@@ -31,7 +31,7 @@ export const Roadmap = () => {
   ];
 
   return (
-    <section className="relative min-h-[100vh] w-full bg-[#1a1612] py-10 overflow-hidden">
+    <section className="relative min-h-[120vh] w-full bg-[#1a1612] py-10 overflow-hidden">
       {/* 1. ФОН И ЗМЕЯ */}
       <div className="absolute inset-0 z-0">
         <img
@@ -44,7 +44,7 @@ export const Roadmap = () => {
       </div>
 
       {/* 2. КОНТЕЙНЕР ДЛЯ ТЕКСТА (Растянут так же как змея) */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
+      <div className="absolute inset-0 z-10 pointer-events-none py-10">
         {steps.map((step) => (
           <div
             key={step.id}
@@ -52,7 +52,7 @@ export const Roadmap = () => {
             className="absolute -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[320px] text-center"
           >
             {/* Большой и жирный текст */}
-            <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent text-lg  font-advent italic leading-tight mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-lg  font-advent italic leading-tight mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {step.title}
             </h3>
 
@@ -65,9 +65,37 @@ export const Roadmap = () => {
       </div>
 
       {/* Заголовок секции */}
-      <div className="relative z-20 text-center mb-10">
-        <h2
-          className="
+      <div className="relative z-20 text-center mb-5">
+        <h1
+          className=" px-4 text-center
+          items-center
+          mt-2 font-fira text-white/90
+          text-xl md:text-3xl
+
+          drop-shadow-md
+          tracking-tight
+          py-1
+        "
+        >
+          все идеи проекты цели это не просто фантазии <br></br> это сигналы
+          товоего истинного масштаба <br></br> но до реализации доходят единицы
+        </h1>
+        <h1
+          className=" px-4 text-center
+          items-center
+          mt-2 font-fira text-white/90
+          text-xl md:text-3xl
+
+          drop-shadow-md
+          tracking-tight
+          py-1
+        "
+        >
+          Не потому что они умнее...
+        </h1>
+        <div className="pt-10">
+          <h2
+            className="
   /* 1. ГРАДИЕНТ (Золото и Жемчуг) */
   bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059]
   bg-clip-text
@@ -86,9 +114,10 @@ export const Roadmap = () => {
   max-w-2xl
   mx-auto
 "
-        >
-          Уровень твоей энергии формирует твою реальность
-        </h2>
+          >
+            Уровень твоей энергии формирует реальность
+          </h2>
+        </div>
       </div>
     </section>
   );

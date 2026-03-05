@@ -11,7 +11,7 @@ export const Hero1 = () => {
           className="w-full h-full object-cover object-top"
         />
         {/* Затемнение для читаемости текста */}
-        <div className="absolute inset-0 bg-black/10" />
+        {/* <div className="absolute inset-0 bg-black/10" /> */}
       </div>
 
       {/* ИМЯ (Сверху) */}
