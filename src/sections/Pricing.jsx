@@ -24,8 +24,9 @@ export const Pricing = () => {
       <div className="absolute inset-0 bg-black/30 pointer-events-none z-0" />
       {/* Золотые переливы по углам (оба в насыщенном бронзовом стиле) */}
       {/* БЛАГОРОДНЫЕ ЗОЛОТЫЕ ПЕРЕЛИВЫ (Античное золото, без желтизны) */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#C5A059] opacity-45 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#C5A059] opacity-45 blur-[120px] rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none z-0" />
+      {/* НАСТОЯЩЕЕ ЗОЛОТО (без лишних подтонов) */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] opacity-40 blur-[100px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] opacity-40 blur-[100px] rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none z-0" />
       <div className="max-w-xl mx-auto flex flex-col gap-8">
         {/* Заголовок секции */}
         <div className="text-center">

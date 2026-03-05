@@ -37,7 +37,7 @@ export const Roadmap = () => {
         <div className="flex flex-col gap-4 md:gap-6">
           <div>
             <h1 className="font-fira text-white/90 text-lg md:text-2xl drop-shadow-md tracking-tight leading-relaxed max-w-4xl mx-auto">
-              Все идеи, проекты и цели — это не просто фантазии. <br />
+              Все идеи, проекты и цели - это не просто фантазии. <br />
               Это сигналы твоего истинного масштаба.
               <br />
               Но до реализации доходят единицы.
