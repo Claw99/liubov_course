@@ -23,59 +23,71 @@ const ProgramSection = () => {
 
         <p className="font-fira text-white/60 text-center text-xs md:text-sm tracking-widest mb-4 drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] italic uppercase leading-relaxed">
           Всё, что нужно, чтобы повысить уровень энергии и начать менять свою
-          реальность.
+          реальность
         </p>
 
         <div className="flex flex-col gap-6 md:gap-8">
           {/* БЛОК 1: 7 структурированных уроков */}
-          <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-12 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+          <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-10 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
             <div className="relative z-10">
-              <div className="flex items-start md:items-center gap-3 md:gap-4 mb-8">
+              {/* Заголовок с уменьшенным нижним отступом (mb-4 вместо mb-8) */}
+              <div className="flex items-start md:items-center gap-3 md:gap-4 mb-2">
                 <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] shadow-[0_0_12px_rgba(197,160,89,0.6)] shrink-0 mt-1.5 md:mt-0" />
-                {/* Исправлено: уменьшен шрифт (text-xl) и tracking на mobile, добавлена поддержка переноса слов */}
                 <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight break-words">
                   7 структурированных уроков
                 </h3>
               </div>
 
-              <ul className="space-y-6">
+              {/* Фраза-связка "на темы:" */}
+              <p className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-sm md:text-base font-advent italic leading-tight mb-4 ml-7 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] uppercase tracking-widest">
+                на темы:
+              </p>
+
+              {/* Список с уменьшенными интервалами (space-y-4 вместо space-y-6) */}
+              <ul className="space-y-4">
                 {[
-                  "Тест на уровень твоей энергии и, исходя из этого, стратегия действий.",
-                  "Главные причины потери энергии.",
-                  "Источники наполнения энергией.",
-                  "Методы материализации накопленной энергии.",
-                  "Материализация «продвинутый уровень».",
-                  "Управление реальностью по-женски.",
+                  "Тест на уровень твоей энергии и, исходя из этого, стратегия действий",
+                  "Главные причины потери энергии",
+                  "Источники наполнения энергией",
+                  "Методы материализации накопленной энергии",
+                  "Материализация «продвинутый уровень»",
+                  "Управление реальностью по-женски",
                 ].map((item, i) => (
-                  <li key={i} className="flex flex-col items-start gap-3">
-                    <div className="w-12 md:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-90" />
-                    <span className="font-fira text-white/90 text-sm md:text-base tracking-wide leading-relaxed drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
+                  <li key={i} className="flex flex-col items-start gap-1.5">
+                    {" "}
+                    {/* Gap уменьшен до 1.5 */}
+                    <div className="w-12 md:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-70" />
+                    <span className="font-fira text-white/90 text-sm md:text-base tracking-wide leading-snug drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
                       {item}
                     </span>
                   </li>
                 ))}
               </ul>
             </div>
+
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-100 pointer-events-none" />
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#c5a059]/10 blur-[80px] rounded-full pointer-events-none" />
           </div>
-
           {/* БЛОК 2: Трансформационная групповая сессия */}
-          <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-12 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+          {/* БЛОК 2: Трансформационная групповая сессия */}
+          <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-10 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
             <div className="relative z-10">
-              <div className="flex items-start gap-3 md:gap-4 mb-8">
+              {/* Уменьшен mb-8 -> mb-3 */}
+              <div className="flex items-start gap-3 md:gap-4 mb-3">
                 <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] mt-1.5 shrink-0 shadow-[0_0_12px_rgba(197,160,89,0.6)]" />
                 <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight">
                   Трансформационная <br /> групповая сессия
                 </h3>
               </div>
-              <div className="space-y-6">
+
+              {/* Уменьшен space-y-6 -> space-y-3 */}
+              <div className="space-y-3">
                 <div className="w-12 md:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-90" />
-                <p className="font-fira text-white/90 text-base md:text-lg tracking-wide drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
+                <p className="font-fira text-white/90 text-sm md:text-lg tracking-wide drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] leading-relaxed">
                   Разблокировка энергии через отмену базовых программ, которые
-                  годами забирают ресурс.
+                  годами забирают ресурс
                 </p>
-                <p className="font-fira text-[#c5a059] italic text-base md:text-lg tracking-wide drop-shadow-[0_3px_6px_rgba(0,0,0,0.3)]">
+                <p className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-base md:text-xl font-advent italic leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,1)]">
                   И, возможно, это началось даже не с тебя.
                 </p>
               </div>
@@ -85,21 +97,24 @@ const ProgramSection = () => {
           </div>
 
           {/* БЛОК 3: Общий чат */}
-          <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-12 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+          <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-10 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
             <div className="relative z-10">
-              <div className="flex items-center gap-3 md:gap-4 mb-8">
+              {/* Уменьшен mb-8 -> mb-4 */}
+              <div className="flex items-center gap-3 md:gap-4 mb-4">
                 <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] shadow-[0_0_12px_rgba(197,160,89,0.6)] shrink-0" />
                 <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest">
                   Общий чат
                 </h3>
               </div>
-              <div className="space-y-6 text-center md:text-left">
-                <p className="font-fira text-white/90 text-lg md:text-xl tracking-widest drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
-                  Закрытый чат всех участников.
+
+              {/* Уменьшен space-y-6 -> space-y-3 */}
+              <div className="space-y-3">
+                <p className="font-fira text-white/90 text-base md:text-xl tracking-widest drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
+                  Закрытый чат всех участников
                 </p>
                 <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-60" />
-                <p className="font-fira text-[#c5a059] text-base md:text-lg uppercase tracking-[0.1em] md:tracking-[0.2em] font-medium drop-shadow-[0_3px_6_rgba(0,0,0,0.3)]">
-                  Поддержка, вопросы, живой процесс.
+                <p className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-sm md:text-lg font-advent italic leading-tight drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)] uppercase tracking-[0.05em]">
+                  Поддержка, вопросы, живой процесс
                 </p>
               </div>
             </div>
