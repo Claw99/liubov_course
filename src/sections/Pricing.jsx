@@ -1,118 +1,108 @@
-import { Check, Flower } from "lucide-react";
+import React from "react";
 
 const plans = [
   {
-    name: "Базовый",
-    price: "499",
+    name: "Программа обучения",
+    price: "111",
     description: "Погружение в основы управления энергией",
     features: [
-      "Модуль 1: Энергоаудит",
-      "Модуль 2: Работа с телом",
-      "Доступ в закрытый чат",
-      "Рабочая тетрадь в PDF",
-    ],
-  },
-  {
-    name: "Премиум",
-    price: "999",
-    description: "Полная трансформация и личное сопровождение",
-    features: [
-      "Все модули курса",
-      "4 личные сессии",
-      "Индивидуальный план питания",
-      "Бессрочный доступ к материалам",
-      "Сертификат о прохождении",
+      "6 видеоуроков",
+      "3 бонусных материала",
+      "Доступ к груповой трансформационной сессии",
+      "Доступ к закрытому чату",
     ],
   },
 ];
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="bg-background py-20 px-5">
-      <div className="max-w-6xl mx-auto">
-        {/* Заголовок секции */}
-        <div className="text-center mb-16">
-          <h2 className="font-advent text-accent-peony text-4xl uppercase tracking-[0.3em]">
-            Тарифы
-          </h2>
-          <div className="w-16 h-[1px] bg-primary/40 mx-auto mt-4"></div>
+    <section id="pricing" className="bg-[#1a1612] py-20 px-5 overflow-hidden">
+      <div className="max-w-xl mx-auto flex flex-col gap-8">
+        {/* Заголовок секции в стиле проекта */}
+        <div className="text-center">
+          <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-3xl uppercase tracking-[0.2em]">
+            Стоимость участия
+          </h3>
+          <div className="w-64 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-60 mt-5 mx-auto" />
         </div>
 
-        {/* Сетка тарифов */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto items-stretch">
-          {plans.map((plan, key) => {
-            const isPremium = plan.name === "Премиум";
+        {plans.map((plan, index) => (
+          <div key={index} className="relative">
+            {/* Основной стеклянный контейнер тарифа */}
+            <div
+              className="
+              relative
+              bg-white/5
+              backdrop-blur-[12px]
+              border border-white/20
+              rounded-3xl
+              p-8 md:p-12
+              overflow-hidden
+              shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]
+            "
+            >
+              {/* Контент тарифа */}
+              <div className="relative z-10 flex flex-col items-center text-center">
+                {/* Название */}
+                <h4 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent text-2xl font-bold uppercase tracking-[0.2em] mb-2">
+                  {plan.name}
+                </h4>
 
-            return (
-              <div
-                key={key}
-                className={`relative flex flex-col h-full rounded-2xl p-8 overflow-hidden transition-all duration-700
-            /* ПРИМЕНЯЕМ ЭФФЕКТ СТЕКЛА ВМЕСТО СТАРЫХ ЦВЕТОВ */
-            bg-white/5 backdrop-blur-[12px] border transition-all duration-500
-            shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]
-            ${
-              isPremium
-                ? "border-primary/80  border-2 scale-105 z-10 shadow-[0_20px_50px_rgba(197,160,89,0.15)]"
-                : "border-white/30 border-2"
-            }`}
-              >
-                {/* ТОТ САМЫЙ БЛИК: теперь внутри карточек тарифов */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-100 pointer-events-none" />
+                <p className="font-fira text-white/60 text-sm tracking-widest mb-8">
+                  {plan.description}
+                </p>
 
-                {/* Содержимое (z-10 чтобы быть над бликом) */}
-                <div className="relative z-10 flex flex-col h-full">
-                  {/* Шапка тарифа */}
-                  <div className="mb-10 text-center">
-                    <h3
-                      className={`font-advent text-3xl uppercase tracking-[0.2em] drop-shadow-sm ${
-                        /* Если Премиум — золото, если Базовый — яркая слоновая кость */
-                        isPremium
-                          ? "text-primary font-bold"
-                          : "text-white font-medium opacity-100"
-                      }`}
-                    >
-                      {plan.name}
-                    </h3>
-                    <p className="font-fira text-sm text-gray-300 mt-3 leading-relaxed">
-                      {plan.description}
-                    </p>
-                    <div className="mt-6 text-5xl font-light text-primary font-advent">
-                      €{plan.price}
-                    </div>
-                  </div>
-
-                  {/* Список возможностей */}
-                  <ul className="flex-grow space-y-6">
-                    {plan.features.map((feature, featureKey) => (
-                      <li
-                        key={featureKey}
-                        className="flex flex-col items-center gap-3 text-center"
-                      >
-                        <div className="w-8 h-[1px] bg-primary/30"></div>
-                        <span className="font-fira text-white/90 text-sm md:text-base leading-[1.6] tracking-wide">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Кнопка */}
-                  <button
-                    className={`mt-12 w-full py-5 rounded-sm font-advent uppercase tracking-[0.2em] text-sm transition-all  border border-primary text-primary hover:bg-primary/10 duration-500
-               `}
-                  >
-                    Выбрать программу
-                  </button>
+                {/* Цена */}
+                <div className="text-6xl font-advent text-white mb-10 flex items-start justify-center">
+                  <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]">
+                    {plan.price}
+                  </span>
+                  <span className="text-2xl mt-2 mr-1 text-[#c5a059]">€</span>
                 </div>
 
-                {/* Мягкое свечение внизу для Премиума */}
-                {isPremium && (
-                  <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
-                )}
+                {/* Список фич (стилизованный под твои точки) */}
+                <ul className="w-full space-y-6 mb-12">
+                  {plan.features.map((feature, fKey) => (
+                    <li key={fKey} className="flex flex-col items-center gap-3">
+                      <div className="w-8 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-40" />
+                      <span className="font-fira text-white/80 text-sm md:text-base tracking-wide leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Кнопка в стиле "тяжелого золота" */}
+                <button
+                  className="
+                  group relative
+                  w-full py-5
+                  rounded-xl
+                  overflow-hidden
+                  transition-all duration-500
+                "
+                >
+                  {/* Фон кнопки - золото */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] transition-transform duration-500 group-hover:scale-105" />
+
+                  {/* Текст кнопки */}
+                  <span className="relative z-10 text-[#1a1612] font-bold uppercase tracking-[0.2em] text-sm">
+                    Занять место в потоке
+                  </span>
+                </button>
               </div>
-            );
-          })}
-        </div>
+
+              {/* Эффекты стекла (блики внутри карточки) */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-100 pointer-events-none" />
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#c5a059]/10 blur-[80px] rounded-full pointer-events-none" />
+            </div>
+          </div>
+        ))}
+
+        {/* Подпись под тарифом */}
+        <p className="text-center text-white/30 font-fira text-xs tracking-[0.2em] uppercase">
+          * Доступ к материалам открывается сразу после оплаты
+        </p>
       </div>
     </section>
   );

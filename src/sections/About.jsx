@@ -46,7 +46,7 @@ export const About = () => {
   ];
 
   return (
-    <section className="bg-background py-16 px-5 overflow-hidden">
+    <section className="bg-[#1a1612] py-16 px-5 overflow-hidden">
       <div className="max-w-xl mx-auto flex flex-col gap-5">
         {/* Заголовок секции */}
         <div className="mb-2 text-center md:text-left">

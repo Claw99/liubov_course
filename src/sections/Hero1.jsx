@@ -11,12 +11,12 @@ export const Hero1 = () => {
           className="w-full h-full object-cover object-top"
         />
         {/* Затемнение для читаемости текста */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       {/* ИМЯ (Сверху) */}
       <div className="absolute top-10 left-0 w-full z-20 text-center px-4">
-        <p className="font-vibes italic text-3xl text-white drop-shadow-sm opacity-90">
+        <p className="font-vibes italic text-3xl text-white drop-shadow-[0_3px_6px_rgba(0,0,0,1)] opacity-90">
           Любовь Калиновская
         </p>
       </div>
@@ -25,22 +25,21 @@ export const Hero1 = () => {
       <div className="relative z-10 h-full w-full pt-40 flex flex-col justify-center items-center px-6 text-center">
         <h2
           className="
-        font-advent text-5xl sm:text-1xl md:text-7xl uppercase tracking-[0.3em] leading-tight bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
+        font-advent text-5xl sm:text-1xl md:text-7xl uppercase tracking-[0.1em] leading-tight bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
         "
         >
-          Управление своей <br /> энергией
+          Управление своей энергией
         </h2>
 
         <p
           className="
-          mt-8 font-fira text-white/90
-
-          text-[clamp(1rem,3vw,1.5rem)]
-          tracking-wider
-          max-w-2xl
-          leading-relaxed
-         drop-shadow-[0_3px_6px_rgba(0,0,0,1)]
-        "
+  mt-8 font-fira text-white
+  text-[clamp(1.25rem,4vw,2.5rem)]
+  tracking-wider
+  max-w-2xl
+  leading-relaxed
+  drop-shadow-[0_10px_20px_rgba(0,0,0,1)]
+"
         >
           Самый важный навык в мире, <br /> который останется с тобой на всю
           жизнь
@@ -56,7 +55,7 @@ export const Hero1 = () => {
             <div
               className="
     absolute inset-0
-    rounded-2xl
+    rounded-full
     border border-white/30
     bg-gradient-to-tr from-[#8a6d3b]/20 via-[#f7f3e8]/40 to-[#c5a059]/20
     backdrop-blur-md
