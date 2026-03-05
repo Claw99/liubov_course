@@ -22,7 +22,7 @@ export const Hero1 = () => {
       </div>
 
       {/* КОНТЕНТ (Смещен на 10% ниже геометрического центра) */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[10vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[12vh]">
         <h2
           className="
             font-advent text-4xl sm:text-5xl md:text-7xl uppercase
@@ -37,13 +37,15 @@ export const Hero1 = () => {
 
         <p
           className="
-            mt-6 md:mt-8 font-fira text-white
-            text-[clamp(1.1rem,3vw,2.2rem)]
-            tracking-tight
-            max-w-2xl
-            leading-relaxed
-            drop-shadow-[0_10px_20px_rgba(0,0,0,1)]
-          "
+    mt-6 md:mt-8 font-fira text-white
+    text-[clamp(1.1rem,3vw,2.2rem)]
+    tracking-tight
+    max-w-2xl
+    mx-auto /* Центрируем, раз текст-центр выше */
+    leading-relaxed
+    /* Сбалансированная тень: чуть больше размытия для мягкости и глубины */
+    drop-shadow-[0_4px_12px_rgba(0,0,0,1)]
+  "
         >
           Самый важный навык в мире, <br className="hidden md:block" /> который
           останется с тобой на всю жизнь
