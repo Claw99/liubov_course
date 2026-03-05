@@ -56,17 +56,13 @@ export const Roadmap = () => {
         </div>
       </div>
 
-      {/* 2. ГЛАВНЫЙ МОНОЛИТ (Змея + Шаги) — МАКСИМАЛЬНЫЙ РАЗМЕР */}
-      <div
-        className="relative flex-grow flex justify-center items-start
-           mt-0 /* Дырка полностью ликвидирована */
-           px-0 md:px-2"
-      >
+      {/* 2. ГЛАВНЫЙ МОНОЛИТ (Змея -4% и Текст -25%) */}
+      <div className="relative flex-grow flex justify-center items-start mt-0 px-0 md:px-2">
         <div
           className="relative w-full
-             max-w-[640px] md:max-w-[1260px] /* ПРЕДЕЛЬНЫЙ МАСШТАБ */
+             max-w-[615px] md:max-w-[1210px] /* Уменьшили ширину */
              aspect-[4/6] md:aspect-[16/10]
-             scale-[1.2] md:scale-[1.25] /* ЗМЕЯ НА ВЕСЬ ЭКРАН */"
+             scale-[1.15] md:scale-[1.2] /* Уменьшили scale на 4-5% */"
         >
           {/* ЗМЕЯ */}
           <img
@@ -86,16 +82,18 @@ export const Roadmap = () => {
                 }}
                 className="
                   absolute -translate-x-1/2 -translate-y-1/2
-                  w-[320px] md:w-[400px] /* Текст стал шире под стать змее */
+                  w-[240px] md:w-[300px] /* Уменьшили ширину контейнера текста */
                   text-center
                 "
               >
-                <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-xl md:text-3xl font-advent italic leading-tight mb-2 drop-shadow-[0_4px_8px_rgba(0,0,0,1)]">
+                {/* Заголовки -25% (было 3xl стало ~2xl/xl) */}
+                <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-lg md:text-2xl font-advent italic leading-tight mb-1 drop-shadow-[0_4px_8px_rgba(0,0,0,1)]">
                   {step.title}
                 </h3>
 
+                {/* Описание -25% (было lg стало sm/base) */}
                 {step.desc && (
-                  <p className="text-white font-fira font-normal text-sm md:text-lg leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,1)] px-4">
+                  <p className="text-white font-fira font-normal text-xs md:text-sm leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,1)] px-4">
                     {step.desc}
                   </p>
                 )}
