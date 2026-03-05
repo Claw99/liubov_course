@@ -5,28 +5,28 @@ export const Roadmap = () => {
       title: "Финансовый объем и способность выдерживать масштаб",
       desc: "",
       top: "20%",
-      left: "50%", // Центральная ось
+      left: "50%",
     },
     {
       id: 2,
       title: "Качество отношений с партнером, семьей, миром",
       desc: "те сценарии, которые ты бессознательно повторяешь",
-      top: "38%", // Ниже первого
-      left: "45%", // Правее
+      top: "38%",
+      left: "48%",
     },
     {
       id: 3,
       title: "Состояние тела",
       desc: "твой ресурс, либидо, гормональный фон, усталость или устойчивость",
-      top: "57%", // Выше четвертого
-      left: "55%", // Левее
+      top: "57%",
+      left: "52%",
     },
     {
       id: 4,
       title: "Яркость, наполненность и вкус жизни",
       desc: "ощущение, что ты живешь по-настоящему, а не на автопилоте",
       top: "78%",
-      left: "50%", // Строго под Step 1 по оси X
+      left: "50%",
     },
   ];
 
@@ -57,8 +57,17 @@ export const Roadmap = () => {
       </div>
 
       {/* 2. ГЛАВНЫЙ МОНОЛИТ (Змея + Шаги) */}
-      <div className="relative flex-grow flex justify-center items-start mt-6 md:mt-10 px-1 md:px-4">
-        <div className="relative w-full max-w-[550px] md:max-w-[1100px] aspect-[4/6] md:aspect-[16/10] scale-105 md:scale-110">
+      <div
+        className="relative flex-grow flex justify-center items-start
+           mt-2 md:mt-4 /* МИНИМАЛЬНЫЙ ОТСТУП (уменьшили дырку) */
+           px-1 md:px-4"
+      >
+        <div
+          className="relative w-full
+             max-w-[580px] md:max-w-[1150px] /* УВЕЛИЧЕНО НА 5% */
+             aspect-[4/6] md:aspect-[16/10]
+             scale-110 md:scale-[1.15] /* ДОБАВИЛИ СОЧНОСТИ */"
+        >
           {/* ЗМЕЯ */}
           <img
             src="/Snake3.svg"
