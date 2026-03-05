@@ -4,11 +4,11 @@ const ProgramSection = () => {
   return (
     <section
       id="program"
-      className="relative py-24 px-5 overflow-hidden"
-      style={{
-        backgroundColor: "#3D2B1F",
-        backgroundImage: `radial-gradient(circle at center, rgba(93, 71, 55, 0.4) 0%, rgba(31, 21, 15, 0.8) 100%)`,
-      }}
+      className="relative py-24 px-5 overflow-hidden bg-[#1a1612]"
+      //   style={{
+      //     backgroundColor: "#3D2B1F",
+      //     backgroundImage: `radial-gradient(circle at center, rgba(93, 71, 55, 0.4) 0%, rgba(31, 21, 15, 0.8) 100%)`,
+      //   }}
     >
       <div className="absolute inset-0 bg-black/20 pointer-events-none z-0" />
 
@@ -30,21 +30,21 @@ const ProgramSection = () => {
           {/* БЛОК 1: 7 структурированных уроков */}
           <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-10 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
             <div className="relative z-10">
-              {/* Заголовок с уменьшенным нижним отступом (mb-4 вместо mb-8) */}
-              <div className="flex items-start md:items-center gap-3 md:gap-4 mb-2">
+              {/* Заголовок: mb-1 (небольшой зазор вернули) */}
+              <div className="flex items-start md:items-center gap-3 md:gap-4 mb-1">
                 <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] shadow-[0_0_12px_rgba(197,160,89,0.6)] shrink-0 mt-1.5 md:mt-0" />
                 <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight break-words">
                   7 структурированных уроков
                 </h3>
               </div>
 
-              {/* Фраза-связка "на темы:" */}
-              <p className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-sm md:text-base font-advent italic leading-tight mb-4 ml-7 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] uppercase tracking-widest">
+              {/* "на темы:": mb-3 (чуть больше места перед списком) */}
+              <p className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight ml-7 mb-3">
                 на темы:
               </p>
 
-              {/* Список с уменьшенными интервалами (space-y-4 вместо space-y-6) */}
-              <ul className="space-y-4">
+              {/* Список: space-y-3 (комфортное расстояние между пунктами) */}
+              <ul className="space-y-3">
                 {[
                   "Тест на уровень твоей энергии и, исходя из этого, стратегия действий",
                   "Главные причины потери энергии",
@@ -53,10 +53,10 @@ const ProgramSection = () => {
                   "Материализация «продвинутый уровень»",
                   "Управление реальностью по-женски",
                 ].map((item, i) => (
-                  <li key={i} className="flex flex-col items-start gap-1.5">
+                  <li key={i} className="flex flex-col items-start gap-1">
                     {" "}
-                    {/* Gap уменьшен до 1.5 */}
-                    <div className="w-12 md:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-70" />
+                    {/* gap-1 — золотая линия не "прилипает" */}
+                    <div className="w-10 md:w-14 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-60" />
                     <span className="font-fira text-white/90 text-sm md:text-base tracking-wide leading-snug drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
                       {item}
                     </span>
@@ -64,6 +64,12 @@ const ProgramSection = () => {
                 ))}
               </ul>
             </div>
+
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-100 pointer-events-none" />
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#c5a059]/10 blur-[80px] rounded-full pointer-events-none" />
+
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-100 pointer-events-none" />
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#c5a059]/10 blur-[80px] rounded-full pointer-events-none" />
 
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-100 pointer-events-none" />
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#c5a059]/10 blur-[80px] rounded-full pointer-events-none" />
@@ -88,7 +94,7 @@ const ProgramSection = () => {
                   годами забирают ресурс
                 </p>
                 <p className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-base md:text-xl font-advent italic leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,1)]">
-                  И, возможно, это началось даже не с тебя.
+                  И, возможно, это началось даже не с тебя
                 </p>
               </div>
             </div>

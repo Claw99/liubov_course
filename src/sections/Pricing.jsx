@@ -89,20 +89,27 @@ export const Pricing = () => {
                 </div>
 
                 {/* Кнопка */}
-                <button
-                  className="
-                  group relative
-                  w-full py-5
-                  rounded-xl
-                  overflow-hidden
-                  transition-all duration-500
-                "
+                <a
+                  href="https://t.me/lkalin2323"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full" // Растягиваем ссылку на всю ширину
                 >
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] transition-transform duration-500 group-hover:scale-105" />
-                  <span className="relative z-10 text-[#1a1612] font-bold uppercase tracking-[0.2em] text-sm drop-shadow-[0_3px_6px_rgba(0,0,0,0.3)]">
-                    Занять место в потоке
-                  </span>
-                </button>
+                  <button
+                    className="
+      group relative
+      w-full py-5
+      rounded-xl
+      overflow-hidden
+      transition-all duration-500
+    "
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] transition-transform duration-500 group-hover:scale-105" />
+                    <span className="relative z-10 text-[#1a1612] font-bold uppercase tracking-[0.2em] text-sm drop-shadow-[0_1px_2px_rgba(255,255,255,0.3)]">
+                      Занять место в потоке
+                    </span>
+                  </button>
+                </a>
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-100 pointer-events-none" />
