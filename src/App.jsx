@@ -8,10 +8,10 @@ import { Roadmap } from "./sections/Roadmap";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <Pricing />
       <Hero1 />
       <Roadmap />
       <About />
-      <Pricing />
       <Hero2 />
       <main></main>
     </div>

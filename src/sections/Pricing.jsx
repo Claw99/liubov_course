@@ -22,7 +22,7 @@ export const Pricing = () => {
       className="relative py-20 px-5 overflow-hidden "
       style={{
         backgroundImage: `
-  radial-gradient(circle at center, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.45) 100%),
+  radial-gradient(circle at center, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.18) 100%),
   url('/pricebg1.png')
 `,
         backgroundSize: "cover",
