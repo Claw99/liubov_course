@@ -30,24 +30,21 @@ const ProgramSection = () => {
           {/* БЛОК 1: 7 структурированных уроков */}
           <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-10 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
             <div className="relative z-10">
-              {/* Заголовок: mb-1 (небольшой зазор вернули) */}
-              <div className="flex items-start gap-3 md:gap-4 mb-3">
-                {/* Наш ромбик-маркер теперь общий для всей группы заголовка */}
+              {/* Общий контейнер для заголовка и маркера */}
+              <div className="flex items-start gap-3 md:gap-4 mb-3 text-left">
+                {/* Ромбик-маркер ( mt-2 чтобы был на уровне первой строки) */}
                 <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] shadow-[0_0_12px_rgba(197,160,89,0.6)] shrink-0 mt-2" />
 
-                <div className="flex flex-col">
-                  <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight break-words">
-                    7 структурированных уроков
-                  </h3>
-
-                  <p className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight">
-                    на темы:
-                  </p>
-                </div>
+                {/* Весь текст одним блоком h3 */}
+                <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight">
+                  7 структурированных уроков
+                  <br /> {/* Вот он, брейк */}
+                  на темы:
+                </h3>
               </div>
 
-              {/* Список: space-y-3 (комфортное расстояние между пунктами) */}
-              <ul className="space-y-3">
+              {/* Список уроков (теперь он будет четко под заголовком) */}
+              <ul className="space-y-3 ml-7 md:ml-9">
                 {[
                   "Тест на уровень твоей энергии и, исходя из этого, стратегия действий",
                   "Главные причины потери энергии",
@@ -57,8 +54,6 @@ const ProgramSection = () => {
                   "Управление реальностью по-женски",
                 ].map((item, i) => (
                   <li key={i} className="flex flex-col items-start gap-1">
-                    {" "}
-                    {/* gap-1 — золотая линия не "прилипает" */}
                     <div className="w-10 md:w-14 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-60" />
                     <span className="font-fira text-white/90 text-sm md:text-base tracking-wide leading-snug drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
                       {item}
