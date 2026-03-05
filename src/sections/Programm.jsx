@@ -30,21 +30,17 @@ const ProgramSection = () => {
           {/* БЛОК 1: 7 структурированных уроков */}
           <div className="relative bg-white/5 backdrop-blur-[12px] border border-white/20 rounded-3xl p-6 md:p-10 overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
             <div className="relative z-10">
-              {/* Общий контейнер для заголовка и маркера */}
-              <div className="flex items-start gap-3 md:gap-4 mb-3 text-left">
-                {/* Ромбик-маркер ( mt-2 чтобы был на уровне первой строки) */}
-                <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] shadow-[0_0_12px_rgba(197,160,89,0.6)] shrink-0 mt-2" />
-
-                {/* Весь текст одним блоком h3 */}
+              {/* Возвращаем чистый заголовок в одну строку с маркером */}
+              <div className="flex items-start md:items-center gap-3 md:gap-4 mb-6">
+                <div className="w-2.5 h-2.5 rotate-45 bg-[#c5a059] shadow-[0_0_12px_rgba(197,160,89,0.6)] shrink-0 mt-1.5 md:mt-0" />
                 <h3 className="bg-gradient-to-bl from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)] font-bold text-lg md:text-2xl uppercase tracking-normal md:tracking-widest leading-tight">
-                  7 структурированных уроков
-                  <br /> {/* Вот он, брейк */}
+                  7 структурированных уроков <br></br>
                   на темы:
                 </h3>
               </div>
 
-              {/* Список уроков (теперь он будет четко под заголовком) */}
-              <ul className="space-y-3 ml-7 md:ml-9">
+              {/* Список уроков с нормальными отступами, чтобы дышалось */}
+              <ul className="space-y-6">
                 {[
                   "Тест на уровень твоей энергии и, исходя из этого, стратегия действий",
                   "Главные причины потери энергии",
@@ -53,9 +49,9 @@ const ProgramSection = () => {
                   "Материализация «продвинутый уровень»",
                   "Управление реальностью по-женски",
                 ].map((item, i) => (
-                  <li key={i} className="flex flex-col items-start gap-1">
-                    <div className="w-10 md:w-14 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-60" />
-                    <span className="font-fira text-white/90 text-sm md:text-base tracking-wide leading-snug drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
+                  <li key={i} className="flex flex-col items-start gap-3">
+                    <div className="w-12 md:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c5a059] to-transparent opacity-90" />
+                    <span className="font-fira text-white/90 text-sm md:text-base tracking-wide leading-relaxed drop-shadow-[0_3px_6px_rgba(0,0,0,0.5)]">
                       {item}
                     </span>
                   </li>
