@@ -56,23 +56,23 @@ export const Roadmap = () => {
         </div>
       </div>
 
-      {/* 2. ГЛАВНЫЙ МОНОЛИТ (Змея + Шаги) — ЕЩЕ +5% ВЕЛИЧИЯ */}
+      {/* 2. ГЛАВНЫЙ МОНОЛИТ (Змея + Шаги) — МАКСИМАЛЬНЫЙ РАЗМЕР */}
       <div
         className="relative flex-grow flex justify-center items-start
-           mt-1 md:mt-2 /* Прижали еще плотнее */
-           px-1 md:px-4"
+           mt-0 /* Дырка полностью ликвидирована */
+           px-0 md:px-2"
       >
         <div
           className="relative w-full
-             max-w-[610px] md:max-w-[1200px] /* ПРЕДЕЛЬНАЯ ШИРИНА */
+             max-w-[640px] md:max-w-[1260px] /* ПРЕДЕЛЬНЫЙ МАСШТАБ */
              aspect-[4/6] md:aspect-[16/10]
-             scale-[1.15] md:scale-[1.2] /* МАКСИМАЛЬНЫЙ МАСШТАБ */"
+             scale-[1.2] md:scale-[1.25] /* ЗМЕЯ НА ВЕСЬ ЭКРАН */"
         >
           {/* ЗМЕЯ */}
           <img
             src="/Snake3.svg"
             alt="Roadmap Line"
-            className="absolute inset-0 w-full h-full object-contain opacity-50 select-none pointer-events-none"
+            className="absolute inset-0 w-full h-full object-contain opacity-60 select-none pointer-events-none"
           />
 
           {/* ТОЧКИ */}
@@ -86,16 +86,16 @@ export const Roadmap = () => {
                 }}
                 className="
                   absolute -translate-x-1/2 -translate-y-1/2
-                  w-[300px] md:w-[380px] /* Чуть расширили область текста под масштаб */
+                  w-[320px] md:w-[400px] /* Текст стал шире под стать змее */
                   text-center
                 "
               >
-                <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-xl md:text-2xl font-advent italic leading-tight mb-1 drop-shadow-[0_2px_6px_rgba(0,0,0,1)]">
+                <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-xl md:text-3xl font-advent italic leading-tight mb-2 drop-shadow-[0_4px_8px_rgba(0,0,0,1)]">
                   {step.title}
                 </h3>
 
                 {step.desc && (
-                  <p className="text-white/95 text-xs md:text-base font-fira font-normal leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,1)] px-2">
+                  <p className="text-white font-fira font-normal text-sm md:text-lg leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,1)] px-4">
                     {step.desc}
                   </p>
                 )}
