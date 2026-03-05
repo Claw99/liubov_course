@@ -21,7 +21,7 @@ export const Pricing = () => {
       id="pricing"
       className="relative bg-[#F5F2E8] py-20 px-5 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black/30 pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-black/10 pointer-events-none z-0" />
       {/* Золотые переливы по углам (оба в насыщенном бронзовом стиле) */}
       {/* БЛАГОРОДНЫЕ ЗОЛОТЫЕ ПЕРЕЛИВЫ (Античное золото, без желтизны) */}
       {/* НАСТОЯЩЕЕ ЗОЛОТО (без лишних подтонов) */}
