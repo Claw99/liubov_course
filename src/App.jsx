@@ -4,11 +4,13 @@ import { Hero2 } from "@/sections/Hero2";
 import { About } from "@/sections/About";
 import { Pricing } from "@/sections/Pricing";
 import { Roadmap } from "./sections/Roadmap";
+import ProgramSection from "./sections/Programm";
 
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Pricing />
+      <ProgramSection />
       <Hero1 />
       <Roadmap />
       <About />
