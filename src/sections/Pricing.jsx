@@ -19,7 +19,7 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="relative bg-[#D4C8A8] py-20 px-5 overflow-hidden"
+      className="relative bg-[#F5F2E8] py-20 px-5 overflow-hidden"
     >
       <div className="absolute inset-0 bg-black/30 pointer-events-none z-0" />
       {/* Золотые переливы по углам (оба в насыщенном бронзовом стиле) */}
