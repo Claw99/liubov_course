@@ -19,14 +19,21 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="relative bg-[#E5DACE] py-20 px-5 overflow-hidden"
+      className="relative py-20 px-5 overflow-hidden "
+      style={{
+        backgroundImage: `
+  radial-gradient(circle at center, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.45) 100%),
+  url('/pricebg1.png')
+`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="absolute inset-0 bg-black/30 pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-black/20 pointer-events-none z-0" />
       {/* Золотые переливы по углам (оба в насыщенном бронзовом стиле) */}
       {/* БЛАГОРОДНЫЕ ЗОЛОТЫЕ ПЕРЕЛИВЫ (Античное золото, без желтизны) */}
       {/* НАСТОЯЩЕЕ ЗОЛОТО (без лишних подтонов) */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] opacity-40 blur-[100px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] opacity-40 blur-[100px] rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none z-0" />
+
       <div className="max-w-xl mx-auto flex flex-col gap-8">
         {/* Заголовок секции */}
         <div className="text-center">
