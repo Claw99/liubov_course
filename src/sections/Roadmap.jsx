@@ -4,119 +4,95 @@ export const Roadmap = () => {
       id: 1,
       title: "Финансовый объем и способность выдерживать масштаб",
       desc: "",
-      top: "25%", // Позиция по вертикали
-      left: "50%", // Центр, но можешь менять (например 45% или 55%)
+      top: "20%",
+      left: "50%", // Центральная ось
     },
     {
       id: 2,
-      title: `Качество отношений с партнером  семьей миром`,
-      desc: "те  сценарии которые  ты бессознаательно повторяешь",
-      top: "38%",
-      left: "40%",
+      title: "Качество отношений с партнером, семьей, миром",
+      desc: "те сценарии, которые ты бессознательно повторяешь",
+      top: "38%", // Ниже первого
+      left: "45%", // Правее
     },
     {
       id: 3,
       title: "Состояние тела",
-      desc: "твой ресурс либидо гормональный фон усталость или устойчивость",
-      top: "56%",
-      left: "60%",
+      desc: "твой ресурс, либидо, гормональный фон, усталость или устойчивость",
+      top: "57%", // Выше четвертого
+      left: "55%", // Левее
     },
     {
       id: 4,
-      title: "Яркость наполненность и вкус жизни",
-      desc: "ощущение что ты живешь по настоящему а не на автопилоте",
-      top: "75%",
-      left: "40%",
+      title: "Яркость, наполненность и вкус жизни",
+      desc: "ощущение, что ты живешь по-настоящему, а не на автопилоте",
+      top: "78%",
+      left: "50%", // Строго под Step 1 по оси X
     },
   ];
 
   return (
-    <section className="relative min-h-[120vh] w-full bg-[#1a1612] py-10 overflow-hidden">
-      {/* 1. ФОН И ЗМЕЯ */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/Snake3.svg"
-          alt="Roadmap Line"
-          className="w-full h-full object-contain opacity-50"
-        />
-        {/* Затемнение краев */}
-        <div className="absolute inset-0" />
-      </div>
-
-      {/* 2. КОНТЕЙНЕР ДЛЯ ТЕКСТА (Растянут так же как змея) */}
-      <div className="absolute inset-0 z-10 pointer-events-none py-10">
-        {steps.map((step) => (
-          <div
-            key={step.id}
-            style={{ top: step.top, left: step.left }}
-            className="absolute -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[320px] text-center"
-          >
-            {/* Большой и жирный текст */}
-            <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-lg  font-advent italic leading-tight mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              {step.title}
-            </h3>
-
-            {/* Текст поменьше и нормал */}
-            <p className="text-white/90 text-sm font-normal leading-snug drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              {step.desc}
-            </p>
+    <section className="relative min-h-screen w-full bg-[#1a1612] overflow-hidden flex flex-col pb-20">
+      {/* 1. МОНОЛИТНЫЙ БЛОК ТЕКСТА */}
+      <div className="relative z-20 w-full pt-10 px-4 text-center">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div>
+            <h1 className="font-fira text-white/90 text-lg md:text-2xl drop-shadow-md tracking-tight leading-relaxed max-w-4xl mx-auto">
+              все идеи, проекты, цели — это не просто фантазии{" "}
+              <br className="hidden md:block" />
+              это сигналы твоего истинного масштаба{" "}
+              <br className="hidden md:block" />
+              но до реализации доходят единицы
+            </h1>
+            <h1 className="mt-4 font-fira text-white/90 text-xl md:text-3xl drop-shadow-md tracking-tight">
+              Не потому что они умнее...
+            </h1>
           </div>
-        ))}
+
+          <div className="pt-2 md:pt-4">
+            <h2 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent text-2xl md:text-4xl font-bold uppercase tracking-[0.1em] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] max-w-2xl mx-auto">
+              Уровень твоей энергии формирует реальность
+            </h2>
+          </div>
+        </div>
       </div>
 
-      {/* Заголовок секции */}
-      <div className="relative z-20 text-center mb-5">
-        <h1
-          className=" px-4 text-center
-          items-center
-          mt-2 font-fira text-white/90
-          text-xl md:text-3xl
+      {/* 2. ГЛАВНЫЙ МОНОЛИТ (Змея + Шаги) */}
+      <div className="relative flex-grow flex justify-center items-start mt-6 md:mt-10 px-1 md:px-4">
+        <div className="relative w-full max-w-[550px] md:max-w-[1100px] aspect-[4/6] md:aspect-[16/10] scale-105 md:scale-110">
+          {/* ЗМЕЯ */}
+          <img
+            src="/Snake3.svg"
+            alt="Roadmap Line"
+            className="absolute inset-0 w-full h-full object-contain opacity-50 select-none pointer-events-none"
+          />
 
-          drop-shadow-md
-          tracking-tight
-          py-1
-        "
-        >
-          все идеи проекты цели это не просто фантазии <br></br> это сигналы
-          товоего истинного масштаба <br></br> но до реализации доходят единицы
-        </h1>
-        <h1
-          className=" px-4 text-center
-          items-center
-          mt-2 font-fira text-white/90
-          text-xl md:text-3xl
+          {/* ТОЧКИ */}
+          <div className="absolute inset-0 z-10">
+            {steps.map((step) => (
+              <div
+                key={step.id}
+                style={{
+                  top: step.top,
+                  left: step.left,
+                }}
+                className="
+                  absolute -translate-x-1/2 -translate-y-1/2
+                  w-[280px] md:w-[350px]
+                  text-center
+                "
+              >
+                <h3 className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-xl md:text-2xl font-advent italic leading-tight mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+                  {step.title}
+                </h3>
 
-          drop-shadow-md
-          tracking-tight
-          py-1
-        "
-        >
-          Не потому что они умнее...
-        </h1>
-        <div className="pt-10">
-          <h2
-            className="
-  /* 1. ГРАДИЕНТ (Золото и Жемчуг) */
-  bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059]
-  bg-clip-text
-  text-transparent
-
-  /* 2. СТИЛЬ: Менее жирно, компактнее */
-  text-2xl md:text-4xl
-  font-bold
-  uppercase
-  tracking-[0.1em] /* Минимальный благородный отступ */
-  leading-tight
-
-  /* 3. АКЦЕНТЫ */
-  drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]
-  text-center
-  max-w-2xl
-  mx-auto
-"
-          >
-            Уровень твоей энергии формирует реальность
-          </h2>
+                {step.desc && (
+                  <p className="text-white/90 text-xs md:text-base font-fira font-normal leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,1)] px-2">
+                    {step.desc}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

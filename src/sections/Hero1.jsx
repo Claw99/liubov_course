@@ -10,7 +10,7 @@ export const Hero1 = () => {
           /* h-full + object-cover + object-top гарантируют стабильность головы в кадре */
           className="w-full h-full object-cover object-top"
         />
-        {/* Затемнение для читаемости текста */}
+        {/* Затемнение для читаемости текста (опционально) */}
         {/* <div className="absolute inset-0 bg-black/10" /> */}
       </div>
 
@@ -21,94 +21,88 @@ export const Hero1 = () => {
         </p>
       </div>
 
-      {/* КОНТЕНТ (Центрированный строго по центру экрана) */}
-      <div className="relative z-10 h-full w-full pt-40 flex flex-col justify-center items-center px-6 text-center">
+      {/* КОНТЕНТ (Смещен на 10% ниже геометрического центра) */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[10vh]">
         <h2
           className="
-        font-advent text-5xl sm:text-1xl md:text-7xl uppercase tracking-[0.1em] leading-tight bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
-        "
+            font-advent text-4xl sm:text-5xl md:text-7xl uppercase
+            tracking-[0.1em] leading-tight
+            bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059]
+            bg-clip-text text-transparent
+            drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
+          "
         >
           Управление своей энергией
         </h2>
 
         <p
           className="
-  mt-8 font-fira text-white
-  text-[clamp(1.25rem,4vw,2.5rem)]
-  tracking-wider
-  max-w-2xl
-  leading-relaxed
-  drop-shadow-[0_10px_20px_rgba(0,0,0,1)]
-"
+            mt-6 md:mt-8 font-fira text-white
+            text-[clamp(1.1rem,3vw,2.2rem)]
+            tracking-tight
+            max-w-2xl
+            leading-relaxed
+            drop-shadow-[0_10px_20px_rgba(0,0,0,1)]
+          "
         >
-          Самый важный навык в мире, <br /> который останется с тобой на всю
-          жизнь
+          Самый важный навык в мире, <br className="hidden md:block" /> который
+          останется с тобой на всю жизнь
         </p>
-
-        {/* КНОПКА (Привязана к низу) */}
-        <div className="absolute bottom-10 left-0 w-full z-20 flex justify-center">
-          <a
-            href="#tariffs"
-            className="group relative px-10 py-2 flex flex-col items-center justify-center transition-all duration-500 active:scale-95"
-          >
-            {/* Основной корпус кнопки (Золотая призма) */}
-            <div
-              className="
-    absolute inset-0
-    rounded-full
-    border border-white/30
-    bg-gradient-to-tr from-[#8a6d3b]/20 via-[#f7f3e8]/40 to-[#c5a059]/20
-    backdrop-blur-md
-    shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_10px_20px_rgba(0,0,0,0.2)]
-    group-hover:shadow-[0_0_25px_rgba(197,160,89,0.3)]
-    group-hover:border-white/50
-    transition-all duration-500
-  "
-            />
-
-            {/* Текст внутри */}
-            <p
-              className="
-    relative z-10
-    font-fira font-normal text-white
-    text-lg uppercase
-    tracking-[0.4em]
-    group-hover:tracking-[0.5em]
-     drop-shadow-[0_3px_6px_rgba(0,0,0,1)]
-    transition-all duration-500
-  "
-            >
-              тарифы
-            </p>
-          </a>
-        </div>
-        <div
-          className="
-    absolute
-    bottom-0 /* Лежит на самом дне */
-    left-0
-    w-full
-    /* 1. ВЫСОТА СВЕЧЕНИЯ */
-    h-5 /* Около 20px, как ты и просил */
-
-    /* 2. ГОРИЗОНТАЛЬНЫЙ ГРАДИЕНТ (Золото к центру) */
-    bg-gradient-to-r from-transparent via-[#c5a059] to-transparent
-
-    /* 3. ВЕРТИКАЛЬНЫЙ ГРАДИЕНТ (Свечение уходит в воздух) */
-    /* Используем mask-image, чтобы растворить полоску по вертикали */
-    [mask-image:linear-gradient(to_bottom,transparent,black_70%,transparent)]
-
-    /* 4. ДОПОЛНИТЕЛЬНЫЙ ЭФФЕКТ СВЕЧЕНИЯ (Глоу) */
-    /* Сильный блюр и яркий цвет создают мягкий ареол */
-    shadow-[0_-5px_20px_5px_rgba(197,160,89,0.3)]
-
-    /* Снижаем общую яркость, чтобы эффект был вуальным */
-    opacity-30
-
-    pointer-events-none /* Чтобы не мешала кликам */
-  "
-        />
       </div>
+
+      {/* КНОПКА (Привязана к низу) */}
+      <div className="absolute bottom-10 left-0 w-full z-20 flex justify-center">
+        <a
+          href="#tariffs"
+          className="group relative px-10 py-2 flex flex-col items-center justify-center transition-all duration-500 active:scale-95"
+        >
+          {/* Основной корпус кнопки (Золотая призма) */}
+          <div
+            className="
+              absolute inset-0
+              rounded-full
+              border border-white/30
+              bg-gradient-to-tr from-[#8a6d3b]/20 via-[#f7f3e8]/40 to-[#c5a059]/20
+              backdrop-blur-md
+              shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_10px_20px_rgba(0,0,0,0.2)]
+              group-hover:shadow-[0_0_25px_rgba(197,160,89,0.3)]
+              group-hover:border-white/50
+              transition-all duration-500
+            "
+          />
+
+          {/* Текст внутри */}
+          <p
+            className="
+              relative z-10
+              font-fira font-normal text-white
+              text-lg uppercase
+              tracking-[0.1em]
+              group-hover:tracking-[0.5em]
+              drop-shadow-[0_3px_6px_rgba(0,0,0,1)]
+              transition-all duration-500
+            "
+          >
+            ЗАНЯТЬ МЕСТО
+          </p>
+        </a>
+      </div>
+
+      {/* НИЖНЯЯ ПОЛОСКА СВЕЧЕНИЯ */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-5
+          bg-gradient-to-r from-transparent via-[#c5a059] to-transparent
+          [mask-image:linear-gradient(to_bottom,transparent,black_70%,transparent)]
+          shadow-[0_-5px_20px_5px_rgba(197,160,89,0.3)]
+          opacity-30
+          pointer-events-none
+        "
+      />
     </section>
   );
 };
