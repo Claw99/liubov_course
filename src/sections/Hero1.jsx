@@ -33,7 +33,7 @@ export const Hero1 = () => {
     whitespace-nowrap
   "
         >
-          Наполнение энергией
+          Наполнение <br></br> энергией
         </h2>
 
         <p
