@@ -9,12 +9,12 @@ import ProgramSection from "./sections/Programm";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <Pricing />
-      <ProgramSection />
       <Hero1 />
       <Roadmap />
       <About />
       <Hero2 />
+      <ProgramSection />
+      <Pricing />
       <main></main>
     </div>
   );

@@ -116,7 +116,7 @@ const ProgramSection = () => {
 
                 {/* Длинный дивайдер убран, текст идет сразу следом */}
                 <p className="bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059] bg-clip-text font-bold text-transparent text-base md:text-xl font-advent italic leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,1)]">
-                  Поддержка, Вопросы, Живой процесс
+                  Поддержка, вопросы, живой процесс
                 </p>
               </div>
             </div>

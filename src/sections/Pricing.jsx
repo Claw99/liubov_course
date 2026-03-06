@@ -19,15 +19,7 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="relative py-20 px-5 overflow-hidden "
-      style={{
-        backgroundImage: `
-  radial-gradient(circle at center, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.18) 100%),
-  url('/pricebg1.png')
-`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative py-20 px-5 overflow-hidden bg-[#1a1612] "
     >
       <div className="absolute inset-0 bg-black/20 pointer-events-none z-0" />
       {/* Золотые переливы по углам (оба в насыщенном бронзовом стиле) */}

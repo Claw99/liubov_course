@@ -22,17 +22,18 @@ export const Hero1 = () => {
       </div>
 
       {/* КОНТЕНТ (Смещен на 10% ниже геометрического центра) */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[12vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[5vh]">
         <h2
           className="
-            font-advent text-4xl sm:text-5xl md:text-7xl uppercase
-            tracking-[0.1em] leading-tight
-            bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059]
-            bg-clip-text text-transparent
-            drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
-          "
+    font-advent text-[2.6rem] xs:text-5xl sm:text-6xl md:text-7xl uppercase
+    tracking-[0.05em] leading-tight
+    bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059]
+    bg-clip-text text-transparent
+    drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
+    whitespace-nowrap
+  "
         >
-          Управление своей энергией
+          Наполнение энергией
         </h2>
 
         <p
