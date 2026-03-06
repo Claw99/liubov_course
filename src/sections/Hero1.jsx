@@ -25,15 +25,16 @@ export const Hero1 = () => {
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[5vh]">
         <h2
           className="
-    font-advent text-[2.6rem] xs:text-5xl sm:text-6xl md:text-7xl uppercase
-    tracking-[0.05em] leading-tight
+    font-advent
+    text-6xl sm:text-7xl md:text-8xl lg:text-9xl
+    uppercase tracking-[0.05em] leading-[0.9]
     bg-gradient-to-tr from-[#8a6d3b] via-[#f7f3e8] to-[#c5a059]
     bg-clip-text text-transparent
-    drop-shadow-[0_3px_6px_rgba(0,0,0,1)] font-bold
-    whitespace-nowrap
+    drop-shadow-[0_4px_8px_rgba(0,0,0,1)] font-bold
+    text-center
   "
         >
-          Наполнение <br></br> энергией
+          Наполнение <br className="xs:hidden" /> энергией
         </h2>
 
         <p
@@ -56,7 +57,7 @@ export const Hero1 = () => {
       {/* КНОПКА (Привязана к низу) */}
       <div className="absolute bottom-10 left-0 w-full z-20 flex justify-center">
         <a
-          href="#tariffs"
+          href="#pricing"
           className="group relative px-10 py-2 flex flex-col items-center justify-center transition-all duration-500 active:scale-95"
         >
           {/* Основной корпус кнопки (Золотая призма) */}

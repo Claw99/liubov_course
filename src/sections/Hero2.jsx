@@ -18,9 +18,9 @@ export const Hero2 = () => {
         </h1>
 
         {/* Регалии сразу под именем */}
-        <p className="mt-4 font-fira text-white/90 text-lg md:text-2xl max-w-2xl tracking-wide drop-shadow-md uppercase opacity-80">
-          Трансформационный ментор • расстановщик <br />
-          Мастер по работе с подсознанием
+        <p className="mt-4 font-fira text-white/90 text-base md:text-2xl max-w-2xl tracking-wide drop-shadow-md uppercase opacity-80">
+          Трансформационный ментор • расстановщик Мастер по работе с
+          подсознанием
         </p>
       </div>
 
@@ -30,7 +30,7 @@ export const Hero2 = () => {
         <p className="font-fira text-white text-base md:text-xl tracking-normal max-w-3xl drop-shadow-[0_4px_8px_rgba(0,0,0,1)] leading-relaxed">
           Я работаю на стыке психологии, системных расстановок и{" "}
           <br className="hidden md:block" />
-          глубинной работы с программами и установками.
+          глубинной работы <br /> с программами и установками.
         </p>
 
         {/* Золотой дивайдер */}
@@ -38,7 +38,7 @@ export const Hero2 = () => {
 
         {/* Текст 2 */}
         <p className="font-fira text-white text-base md:text-xl tracking-normal max-w-3xl drop-shadow-[0_4px_8px_rgba(0,0,0,1)] leading-relaxed">
-          Моя задача — не мотивировать тебя, а помочь перестроить{" "}
+          Моя задача - не мотивировать тебя, а помочь перестроить{" "}
           <br className="hidden md:block" />
           внутреннюю систему так, чтобы результат стал естественным следствием.
         </p>
