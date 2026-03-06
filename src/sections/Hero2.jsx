@@ -30,7 +30,7 @@ export const Hero2 = () => {
         <p className="font-fira text-white text-base md:text-xl tracking-normal max-w-3xl drop-shadow-[0_4px_8px_rgba(0,0,0,1)] leading-relaxed">
           Я работаю на стыке психологии, системных расстановок и{" "}
           <br className="hidden md:block" />
-          глубинной работы <br /> с программами и установками.
+          глубинной работы <br /> с программами и установками
         </p>
 
         {/* Золотой дивайдер */}
@@ -40,7 +40,7 @@ export const Hero2 = () => {
         <p className="font-fira text-white text-base md:text-xl tracking-normal max-w-3xl drop-shadow-[0_4px_8px_rgba(0,0,0,1)] leading-relaxed">
           Моя задача - не мотивировать тебя, а помочь перестроить{" "}
           <br className="hidden md:block" />
-          внутреннюю систему так, чтобы результат стал естественным следствием.
+          внутреннюю систему так, чтобы результат стал естественным следствием
         </p>
       </div>
 

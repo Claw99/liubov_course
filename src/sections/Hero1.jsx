@@ -22,7 +22,7 @@ export const Hero1 = () => {
       </div>
 
       {/* КОНТЕНТ (Смещен на 10% ниже геометрического центра) */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[5vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 text-center transform translate-y-[8vh]">
         <h2
           className="
     font-advent
